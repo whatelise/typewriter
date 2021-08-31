@@ -22,9 +22,9 @@ function loop() {
   document.getElementById(sound[random]).play();
 
   if (nextLetter < maxNumberOfIterations) {
-    // let time = [100, 150, 175, 200];
-    // const randomTime = Math.floor(Math.random() * time.length);
-    setTimeout(loop, 150);
+    let time = [100, 150, 200, 300];
+    const randomTime = Math.floor(Math.random() * time.length);
+    setTimeout(loop, time[randomTime]);
   }
 
   document.querySelector("html").addEventListener("click", clickStart);
